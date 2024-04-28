@@ -1,0 +1,54 @@
+html {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: black;
+  overflow: hidden;
+  color: white;
+}
+
+.menu,
+.settingsmenu {
+  position: absolute;
+  top: 12vw;
+  left: 12vw;
+  font-size: 30px;
+}
+
+.settings,
+.credits,
+.rickroll {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.music,
+.sound,
+.play,
+.quiteplay,
+.quitese,
+.song{
+  cursor: pointer;
+  user-select: none;
+}
+
+.playmenu {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 5vw;
+}
+
+.music,
+.quitese {
+  margin-top: 30px;
+}
+
+.settingsmenu,
+.playmenu,
+.Song {
+  display: none;
+}
+
+.controls {
+  margin-top: 30px;
+}

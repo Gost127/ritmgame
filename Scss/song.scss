@@ -1,0 +1,204 @@
+html {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: black;
+  overflow: hidden;
+}
+
+.game {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+.lines {
+  height: 100%;
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+.line {
+  display: inline-block;
+  border-right: 2px solid #fff;
+  background: rgba(0, 20, 20, 0.65);
+  height: 100%;
+  width: min(25vw, 125px);
+  margin-right: -3px;
+  margin-bottom: -5px;
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.buttons {
+  height: 100%;
+  position: absolute;
+  left: 50vw;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.btn {
+  display: inline-block;
+  width: min(25vw, 125px);
+  height: 175px;
+  border-top: 1px solid #fff;
+  position: relative;
+  top: calc(100% - 175px);
+  margin-right: -3px;
+}
+
+.text-acc {
+  position: absolute;
+  top: 16vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 40px;
+}
+
+.text-combo {
+  position: absolute;
+  top: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00ffff;
+  font-size: 40px;
+}
+.text-score {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 40px;
+}
+
+.spawners {
+  height: 100%;
+  position: absolute;
+  left: 50vw;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.spawner {
+  position: relative;
+  display: inline-block;
+  width: min(25vw, 125px);
+  height: 175px;
+  position: relative;
+  top: 0;
+  margin-right: -3px;
+}
+
+.tile {
+  position: absolute;
+  width: 100%;
+  background: #ff8a8a;
+}
+
+.endgame {
+  display: none;
+  color: #fff;
+  position: absolute;
+  left: 7%;
+  top: 5vh;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+.acc {
+  margin: 25px;
+  span {
+    margin-left: 10px;
+    font-size: 45px;
+  }
+}
+.score {
+  margin-top: 1vh;
+  font-size: 50px;
+}
+.rank {
+  margin-top: 4vh;
+  font-size: 50px;
+  span {
+    font-size: min(20vw, 100px);
+    color: gold;
+  }
+}
+.combo {
+  margin-top: 3vh;
+  font-size: 40px;
+  display: inline-block;
+}
+
+.fullc,
+.fullp {
+  margin-top: 20px;
+  display: inline-block;
+  animation: full 1s alternate infinite linear;
+}
+
+.restart {
+  margin-top: 40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+@keyframes full {
+  from {
+    transform: rotate(-15deg) scale(0.8);
+  }
+  to {
+    transform: rotate(15deg) scale(1.2);
+  }
+}
+@media (width <= 1050px) {
+  .line,
+  .btn,
+  .spawner {
+    width: min(25vw, 90px);
+  }
+}
+
+@media (width <= 768px) {
+  .lines,
+  .buttons,
+  .spawners {
+    left: 0vw;
+    transform: translateX(0%);
+  }
+  .line {
+    width: 25vw;
+  }
+  .btn,
+  .spawner {
+    width: 25vw;
+  }
+}
+
+@media (width <= 500px) or (height <= 500px) {
+  .endgame,
+  .score,
+  .rank,
+  .combo,
+  .restart {
+    font-size: 20px;
+  }
+  .acc span {
+    font-size: 20px;
+  }
+  .rank span {
+    font-size: 30px;
+  }
+  .fullc,
+  .fullp {
+    font-size: 20px;
+  }
+
+  .acc {
+    margin: 10px;
+  }
+}
